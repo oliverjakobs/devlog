@@ -6,6 +6,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    line-height: 64px;
 }
 
 .navbar {
@@ -17,18 +18,16 @@
 .navbar .logo {
     color: #ffffff;
     font-size: 2em;
-    line-height: 64px;
-    margin-left: 10%;
+    margin-left: 2rem;
     font-weight: bold;
 }
 .menu {
     float: right;
-    margin-right: 10%;
+    margin-right: 2rem;
 }
 
 .menu li {
     display: inline-block;
-    line-height: 64px;
     margin: 0 5px;
 }
 
@@ -36,7 +35,6 @@
     color: #c2c2c2;
     font-size: 1.4em;
     padding: 7px 13px;
-    border-radius: 3px;
     text-transform: lowercase;
 }
 
@@ -49,7 +47,6 @@
     font-size: 2em;
     color: #c2c2c2;
     float: right;
-    line-height: 64px;
     margin-right: 40px;
     cursor: pointer;
     display: none;

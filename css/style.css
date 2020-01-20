@@ -7,10 +7,22 @@
 }
 
 /* */
-.separator {
-    padding-bottom: 4rem;
+.separator-bottom {
+    padding-bottom: 2rem;
     margin-bottom: 2rem;
     border-bottom: #c9c9c9 1px solid;
+}
+
+.separator-top {
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: #c9c9c9 1px solid;
+}
+
+.container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
@@ -24,6 +36,10 @@ a {
     color: inherit;
 }
 
+.icon {
+    padding-right: 0.8em;
+}
+
 .clearfix::after {
     content: '';
     display: block;
@@ -34,33 +50,35 @@ a {
 
 .content {
     font-size: 1.1em;
-    width: 80%;
-    margin: 30px auto 30px;
 }
 
-.content .main-content {
-    width: 70%;
-    float: left;
+.content .content-title {
+    margin-bottom: 1.4em;
 }
 
-.content .main-content .title {
-    margin: 20px;
-}
-
-/* WELCOME */
-
-.welcome
-{
+.content .content-block {
     padding: 2rem;
+    line-height: 1.4em;
+}
+
+.button {
+    padding-top: 1rem;
+    color: #acacac;
+}
+
+.button:hover {
+    padding-top: 1rem;
+    color: #7a7a7a;
 }
 
 /* POST */
 
 .post {
-    width: 90%;
     padding: 2rem;
     margin: 1rem;
-    border-bottom: #bbbbbb 1px solid;
+}
+
+.post-border:hover {
     border: 1px solid #919191;
 }
 
@@ -69,26 +87,57 @@ a {
     line-height: 1.7em;
 }
 
-.post-read-more {
-    padding-top: 1rem;
-    color: #919191;
-}
-
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    color: #9EABB3;
+    color: #acacac;
 }
 
-.post-meta i {
-    padding-right: 0.8em;
+/* Footer */
+
+.page-footer {
+    height: 3rem;
+    border-top: #c9c9c9 1px solid;
+    text-align: center;
 }
 
-/* SIDEBAR */
-
-.content .sidebar {
-    width: 30%;
-    float: left;
-    border: 1px dashed green;
-    height: 600px;
+.footer-content {
+    line-height: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0px;
 }
+
+.footer-content li {
+    display: inline;
+    color: #acacac;
+}
+
+.footer-content li .icon {
+    font-size: 1.4em;
+    padding-right: 0.4em;
+}
+
+.footer-content li a:hover {
+    color: #7a7a7a;
+}
+
+.footer-content > li:not(:last-child)::after {
+    content: "|";
+    margin: 1.25em;
+}
+
+@media (max-width: 964px) {
+
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 592px) {
+
+    .container {
+        width: 100%;
+    }
+}
+
