@@ -2,11 +2,23 @@
     box-sizing: border-box;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Lucida Console;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* UTILITY */
+
 .justify {
     text-align: justify;
 }
 
-/* */
 .separator-bottom {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
@@ -23,21 +35,6 @@
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    font-family: Lucida Console;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.icon {
-    padding-right: 0.8em;
 }
 
 .clearfix::after {
@@ -82,28 +79,80 @@ a {
     border: 1px solid #919191;
 }
 
-.post-preview {
+.post-summary {
     margin: 0;
     line-height: 1.7em;
 }
 
 .post-meta {
-    display: block;
-    margin: 1.75rem 0 0 0;
-    color: #acacac;
+    line-height: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0px;
 }
 
-/* Footer */
+.post-meta li {
+    display: inline;
+    color: #acacac;
+    margin-right: 1em;
+}
+
+.post-meta li .icon {
+    padding-right: 0.8em;
+}
+
+.post-meta li a:hover {
+    color: #7a7a7a;
+}
+
+/* PROJECTS */
+
+.project-list {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-list li {
+    margin-bottom: 1em;
+    border: 1px solid #acacac;
+}
+
+.project-list li a {
+    padding: 1em;
+    margin: 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.project-list li span {
+    color: #acacac;
+    float: right;
+}
+
+.project-list li:hover {
+    border-color: #7a7a7a;
+}
+
+.project-list li:hover span {
+    color: #7a7a7a;
+}
+
+/* FOOTER */
 
 .page-footer {
-    height: 3rem;
+    height: 3em;
     border-top: #c9c9c9 1px solid;
     text-align: center;
 }
 
 .footer-content {
-    line-height: 3rem;
+    line-height: 3em;
     list-style: none;
+    text-transform: lowercase;
     padding: 0;
     margin: 0px;
 }
@@ -127,10 +176,36 @@ a {
     margin: 1.25em;
 }
 
-@media (max-width: 964px) {
+/* MEDIA QUERY */
+
+@media (max-width: 1200px) {
 
     .container {
         width: 80%;
+    }
+
+    .project-list {
+        width: 100%;
+    }
+
+    .footer-content li {
+        display: block;
+    }
+
+    .footer-content > li:not(:last-child)::after {
+        content: "";
+        margin: 0;
+    }
+}
+
+@media (max-width: 812px) {
+
+    .post-meta {
+        margin-top: 1em;
+    }
+
+    .post-meta li {
+        display: block;
     }
 }
 
