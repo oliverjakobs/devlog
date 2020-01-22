@@ -8,6 +8,10 @@ body {
     font-family: Lucida Console;
 }
 
+textarea {
+    font-family: Lucida Console;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -20,8 +24,7 @@ a {
 }
 
 .separator-bottom {
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
+    padding-bottom: 1em;
     border-bottom: #c9c9c9 1px solid;
 }
 
@@ -33,6 +36,12 @@ a {
 
 .container {
     width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-small {
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -49,22 +58,22 @@ a {
     font-size: 1.1em;
 }
 
-.content .content-title {
-    margin-bottom: 1.4em;
-}
-
-.content .content-block {
+.content .block {
     padding: 2rem;
     line-height: 1.4em;
 }
 
+.content .block > .title {
+    margin-bottom: 1.4em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #c9c9c9;
+}
+
 .button {
-    padding-top: 1rem;
     color: #acacac;
 }
 
 .button:hover {
-    padding-top: 1rem;
     color: #7a7a7a;
 }
 
@@ -75,44 +84,40 @@ a {
     margin: 1rem;
 }
 
-.post-border:hover {
-    border: 1px solid #919191;
-}
-
-.post-summary {
-    margin: 0;
-    line-height: 1.7em;
-}
-
-.post-meta {
-    line-height: 3rem;
-    list-style: none;
-    padding: 0;
+.post * {
     margin: 0px;
+    padding: 0px;
 }
 
-.post-meta li {
+.post .title {
+    margin-bottom: 0.2em;
+}
+
+.post .meta {
+    font-size: 0.8em;
+}
+
+.post .meta li {
     display: inline;
+    margin-right: 0.6em;
     color: #acacac;
-    margin-right: 1em;
 }
 
-.post-meta li .icon {
-    padding-right: 0.8em;
+.post .meta li .icon {
+    padding-right: 0.4em;
 }
 
-.post-meta li a:hover {
-    color: #7a7a7a;
+.post .summary {
+    margin: 0.6em 0em;
 }
 
 /* PROJECTS */
 
 .project-list {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2em auto;
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
 .project-list li {
@@ -135,10 +140,74 @@ a {
 
 .project-list li:hover {
     border-color: #7a7a7a;
+    transition: .5s;
 }
 
 .project-list li:hover span {
     color: #7a7a7a;
+    transition: .5s;
+}
+
+/* CONTACT FORM */
+
+form.contact
+{
+    padding: .8em .8em;
+    outline: 1px solid #acacac;
+    text-align: center;
+}
+
+form.contact .title
+{
+    text-align: left;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+form.contact section
+{
+    margin: 0.6em 0;
+    padding: 0.6em 0;
+}
+
+form.contact section label
+{
+    display: block;
+    text-align: left;
+}
+
+form.contact section input, form.contact section textarea
+{
+    width: 100%;
+    font-size: 1em;
+    margin-top: 0.4em;
+    border: 1px solid #acacac;
+}
+
+form.contact section *::placeholder {
+    color: #acacac;
+    opacity: 1;
+    text-transform: lowercase;
+  }
+
+form.contact button
+{
+    display: inline-block;
+    font-size: 1em;
+    background: none;
+    border: 1px solid #acacac;
+    padding: .8em 0;
+    margin-top: 0.6em;
+    width: 100%;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+
+form.contact button:hover
+{
+    color: #7a7a7a;
+    border-color: #7a7a7a;
+    transition: .5s;
 }
 
 /* FOOTER */
@@ -169,6 +238,7 @@ a {
 
 .footer-content li a:hover {
     color: #7a7a7a;
+    transition: .5s;
 }
 
 .footer-content > li:not(:last-child)::after {

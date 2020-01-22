@@ -30,10 +30,25 @@
     </nav>
 
     <!-- Content -->
-    <div class="content container clearfix">
+    <div class="content container-small clearfix">
 
-      <div class="content-block">
-        <h1 class="content-title">Contact</h1>
+      <div class="block">
+        <form class="contact">
+          <h1 class="title">Contact</h1>
+          <section>
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter Your Name">
+          </section>
+          <section>
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Enter your Email Address">
+          </section>
+          <section>
+            <label>Message</label>
+            <textarea name="message" rows="7"></textarea>
+          </section>
+          <button>Send <i class="far fa-paper-plane"></i></button>
+        </form>
       </div>
         
     </div>
