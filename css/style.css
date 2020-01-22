@@ -17,6 +17,14 @@ a {
     color: inherit;
 }
 
+a.default {
+    color: #acacac;
+}
+
+a.default:hover {
+    color: #7a7a7a;
+}
+
 /* UTILITY */
 
 .justify {
@@ -53,27 +61,19 @@ a {
 
 /* CONTENT */
 
-.content {
+.page-content {
     font-size: 1.1em;
 }
 
-.content .block {
+.page-content .block {
     padding: 2rem;
     line-height: 1.4em;
 }
 
-.content .block > .title {
+.page-content .block > .title {
     margin-bottom: 1.4em;
     padding-bottom: 1em;
     border-bottom: 1px solid #c9c9c9;
-}
-
-.button {
-    color: #acacac;
-}
-
-.button:hover {
-    color: #7a7a7a;
 }
 
 /* POST */
@@ -195,8 +195,8 @@ form.contact button
     font-size: 1em;
     background: none;
     border: 1px solid #acacac;
-    padding: .8em 0;
-    margin-top: 0.6em;
+    padding: .8em 0em;
+    margin-top: .6em;
     width: 100%;
     text-transform: lowercase;
     cursor: pointer;
@@ -213,11 +213,11 @@ form.contact button:hover
 
 .page-footer {
     height: 3em;
-    border-top: #c9c9c9 1px solid;
+    border-top: 1px solid #c9c9c9;
     text-align: center;
 }
 
-.footer-content {
+.page-footer > .content {
     line-height: 3em;
     list-style: none;
     text-transform: lowercase;
@@ -225,22 +225,26 @@ form.contact button:hover
     margin: 0px;
 }
 
-.footer-content li {
+.page-footer > .content li {
     display: inline;
     color: #acacac;
 }
 
-.footer-content li .icon {
+.page-footer > .content li * {
+    vertical-align: middle;
+}
+
+.page-footer > .content li .icon {
     font-size: 1.4em;
     padding-right: 0.4em;
 }
 
-.footer-content li a:hover {
+.page-footer > .content li a:hover {
     color: #7a7a7a;
     transition: .5s;
 }
 
-.footer-content > li:not(:last-child)::after {
+.page-footer > .content > li:not(:last-child)::after {
     content: "|";
     margin: 1.25em;
 }
