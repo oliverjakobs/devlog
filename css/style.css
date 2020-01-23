@@ -89,11 +89,12 @@ a.default:hover {
 }
 
 .post .title {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.3em;
 }
 
 .post .meta {
     font-size: 0.8em;
+    padding-left: 0.1em;
 }
 
 .post .meta li {
@@ -178,6 +179,7 @@ form.contact section label
 form.contact section input, form.contact section textarea
 {
     width: 100%;
+    resize: none;
     font-size: 1em;
     margin-top: 0.4em;
     border: 1px solid #acacac;
@@ -279,11 +281,11 @@ form.contact button:hover
         width: 100%;
     }
 
-    .footer-content li {
+    .page-footer > .content li {
         display: block;
     }
 
-    .footer-content > li:not(:last-child)::after {
+    .page-footer > .content > li:not(:last-child)::after {
         content: "";
         margin: 0;
     }
