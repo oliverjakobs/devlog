@@ -88,24 +88,6 @@ a {
     width: $container-width;
     margin-left: auto;
     margin-right: auto;
-
-    @media screen and (max-width: $screen-large) {
-        width: $container-width-desktop;
-    }
-
-    @media screen and (max-width: $screen-medium) {
-        width: $container-width-tablet;
-    }
-
-    @media screen and (max-width: $screen-smallest) {
-        width: $container-width-phone;
-    }
-}
-
-.container-small {
-    width: $container-width / 2;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* NAVBAR */
@@ -128,63 +110,21 @@ a {
         color: $color-font-light;
         font-size: 2em;
         font-weight: bold;
-        
-        @media screen and (max-width: $screen-large) {
-            margin-left: $navbar-margin-desktop;
-        }
-
-        @media screen and (max-width: $screen-medium) {
-            margin-left: $navbar-margin-tablet;
-        }
-
-        @media screen and (max-width: $screen-smallest) {
-            margin-left: $navbar-margin-phone;
-        }
     }
 
     .menu {
         float: right;
         margin-right: $navbar-margin;
 
-        @media screen and (max-width: $screen-large) {
-            margin-right: $navbar-margin-desktop;
-        }
-
-        @media screen and (max-width: $screen-medium) {
-            margin-right: $navbar-margin-tablet;
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            top: $navbar-height;
-            left: -100%;
-            background: $color-darker;
-            text-align: center;
-            transition: all .5s;
-        }
-
-        @media screen and (max-width: $screen-smallest) {
-            margin-right: $navbar-margin-phone;
-        }
-
         li {
             display: inline-block;
             margin: 0 5px;
-
-            @media screen and (max-width: $screen-medium) {
-                display: block;
-                margin: 50px 0;
-                line-height: 30px;
-            }
 
             a {
                 color: $color-font-light;
                 font-size: 1.4em;
                 padding: 7px 13px;
                 text-transform: lowercase;
-                
-                @media (max-width: $screen-medium) {
-                    font-size: 20px;
-                }
 
                 &:hover {
                     color: $color-lighter;
@@ -202,14 +142,6 @@ a {
         cursor: pointer;
         display: none;
 
-        @media screen and (max-width: $screen-medium) {
-            display: block;
-        }
-        
-        @media screen and (max-width: $screen-smallest) {
-            margin-right: $navbar-margin-phone;
-        }
-
         &:hover {
             color: $color-lighter;
             transition: .5s;
@@ -218,17 +150,10 @@ a {
 
     #menu-check {
         display: none;
-
-        &:checked ~ .menu {
-            @media screen and (max-width: $screen-medium) {
-                left: 0;
-            }
-        }
     }
 }
 
 /* CONTENT */
-
 .page-content {
     font-size: 1.1em;
 
@@ -243,14 +168,9 @@ a {
 }
 
 /* POST */
-
 .post {
     padding: 2rem;
     margin: 1rem;
-
-    @media screen and (max-width: $screen-medium) {
-        padding: 2rem 0rem;
-    }
 
     * {
         margin: 0px;
@@ -264,19 +184,11 @@ a {
     .meta {
         font-size: .85em;
         padding-left: 0.1em;
-        
-        @media screen and (max-width: $screen-small) {
-            margin-top: 1em;
-        }
 
         li {
             display: inline;
             margin-right: 0.6em;
             color: $color-lighter;
-
-            @media screen and (max-width: $screen-small) {
-                display: block;
-            }
 
             .icon {
                 padding-right: 0.4em;
@@ -290,16 +202,11 @@ a {
 }
 
 /* PROJECTS */
-
 .project-list {
     width: 80%;
     margin: 2em auto;
     list-style: none;
     padding: 0;
-
-    @media screen and (max-width: $screen-large) {
-        width: 100%;
-    }
 
     li {
         margin-bottom: 1em;
@@ -326,7 +233,6 @@ a {
 }
 
 /* CONTACT FORM */
-
 form.contact
 {
     padding: .8em .8em;
@@ -388,7 +294,6 @@ form.contact
 }
 
 /* FOOTER */
-
 .page-footer {
     height: $footer-height;
     text-align: center;
@@ -405,10 +310,6 @@ form.contact
         li {
             display: inline;
             color: $color-lighter;
-
-            @media screen and (max-width: $screen-medium) {
-                display: block;
-            }
 
             * {
                 vertical-align: middle;
@@ -427,15 +328,109 @@ form.contact
             &:not(:last-child)::after {
                 content: "|";
                 margin: 1.25em;
-
-                @media screen and (max-width: $screen-medium) {
-                    content: "";
-                    margin: 0;
-                }
             }
         }
     }
 }
 
-/* MEDIA QUERY */
+/* MEDIA QUERIES */
 
+@media screen and (max-width: $screen-large) {
+
+    .container {
+        width: $container-width-desktop;
+    }
+
+    .navbar {
+        .logo {
+            margin-left: $navbar-margin-desktop;
+        }
+    
+        .menu {
+            margin-right: $navbar-margin-desktop;
+        }
+    }
+
+    .project-list {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $screen-medium) {
+
+    .container {
+        width: $container-width-tablet;
+    }
+
+    .navbar {
+        .logo {
+            margin-left: $navbar-margin-tablet;
+        }
+    
+        .menu {
+            margin-right: $navbar-margin-tablet;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: $navbar-height;
+            left: -100%;
+            background: $color-darker;
+            text-align: center;
+            transition: all .5s;
+
+            li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+    
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    
+        .menu-btn {
+            display: block;
+        }
+    
+        #menu-check:checked ~ .menu {
+            left: 0;
+        }
+    }
+
+    .post {
+        padding: 2rem 0rem;
+    }
+}
+
+@media screen and (max-width: $screen-small) {
+    
+    .post .meta {
+        margin-top: 1em;
+
+        li {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-smallest) {
+
+    .container {
+        width: $container-width-phone;
+    }
+
+    .navbar {
+        .logo {
+            margin-left: $navbar-margin-phone;
+        }
+    
+        .menu {
+            margin-right: $navbar-margin-phone;
+        }
+    
+        .menu-btn {
+            margin-right: $navbar-margin-phone;
+        }
+    }
+}
