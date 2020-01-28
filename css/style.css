@@ -165,6 +165,22 @@ a.default:hover {
   margin: 0.6em 0em;
 }
 
+/* POST DETAIL */
+.post-detail .meta {
+  font-size: .85em;
+  padding-left: 0.1em;
+}
+
+.post-detail .meta li {
+  display: inline;
+  margin-right: 0.6em;
+  color: #bbbbbb;
+}
+
+.post-detail .meta li .icon {
+  padding-right: 0.4em;
+}
+
 /* PROJECTS */
 .project-list {
   width: 80%;
@@ -200,7 +216,7 @@ a.default:hover {
 /* CONTACT FORM */
 form.contact {
   padding: .8em .8em;
-  outline: 1px solid #999999;
+  border: 1px solid #999999;
   text-align: center;
   max-width: 480px;
   margin-left: auto;
@@ -209,23 +225,22 @@ form.contact {
 
 form.contact .title {
   text-align: left;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #bbbbbb;
 }
 
 form.contact section {
   margin: 0.6em 0;
   padding: 0.6em 0;
+  text-align: left;
 }
 
 form.contact section label {
   display: block;
-  text-align: left;
 }
 
 form.contact section input, form.contact section textarea {
   width: 100%;
   resize: none;
+  line-height: 1.1em;
   font-size: 1em;
   font-family: "Lucida Console";
   margin-top: 0.4em;
@@ -233,27 +248,27 @@ form.contact section input, form.contact section textarea {
 }
 
 form.contact section *::-webkit-input-placeholder {
+  text-transform: lowercase;
   color: #999999;
   opacity: 1;
-  text-transform: lowercase;
 }
 
 form.contact section *:-ms-input-placeholder {
+  text-transform: lowercase;
   color: #999999;
   opacity: 1;
-  text-transform: lowercase;
 }
 
 form.contact section *::-ms-input-placeholder {
+  text-transform: lowercase;
   color: #999999;
   opacity: 1;
-  text-transform: lowercase;
 }
 
 form.contact section *::placeholder {
+  text-transform: lowercase;
   color: #999999;
   opacity: 1;
-  text-transform: lowercase;
 }
 
 form.contact button {
