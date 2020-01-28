@@ -16,10 +16,8 @@
     <!-- Navbar -->
     <nav class="navbar">
       <label class="logo">{devlog}</label>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
+      <input type="checkbox" id="menu-check">
+      <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="timeline.html">Timeline</a></li>
@@ -29,11 +27,11 @@
     </nav>
 
     <!-- Content -->
-    <div class="page-content container-small clearfix">
+    <div class="page-content clearfix">
 
       <div class="block">
         <form class="contact">
-          <h1 class="title">Contact</h1>
+          <h1 class="title separator-bottom">Contact</h1>
           <section>
             <label>Name</label>
             <input type="text" name="name" placeholder="Enter Your Name">
@@ -44,7 +42,7 @@
           </section>
           <section>
             <label>Message</label>
-            <textarea name="message" rows="8"></textarea>
+            <textarea name="message" rows="8" placeholder="Your Message"></textarea>
           </section>
           <button>Send <i class="far fa-paper-plane"></i></button>
         </form>
