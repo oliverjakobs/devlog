@@ -125,7 +125,7 @@ a {
             }
 
             &:hover {
-                transition: all .5s ease;
+                transition: transform .5s ease;
 
                 &::before { transform: translateX(-.2em); }
                 &::after { transform: translateX(.2em); }
@@ -219,7 +219,7 @@ a {
             margin-right: 0.6em;
             color: $color-lighter;
 
-            .icon {
+            i {
                 padding-right: 0.4em;
             }
         }
@@ -242,7 +242,7 @@ a {
             margin-right: 0.6em;
             color: $color-lighter;
 
-            .icon {
+            i {
                 padding-right: 0.4em;
             }
         }
@@ -363,7 +363,7 @@ form.contact
                 vertical-align: middle;
             }
 
-            .icon {
+            i {
                 font-size: 1.4em;
                 padding-right: 0.4em;
             }

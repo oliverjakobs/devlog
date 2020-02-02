@@ -94,8 +94,10 @@ a.default:hover {
 }
 
 .navbar .logo a:hover {
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .navbar .logo a:hover::before {
@@ -198,7 +200,7 @@ a.default:hover {
   color: #bbbbbb;
 }
 
-.post .meta li .icon {
+.post .meta li i {
   padding-right: 0.4em;
 }
 
@@ -218,7 +220,7 @@ a.default:hover {
   color: #bbbbbb;
 }
 
-.post-detail .meta li .icon {
+.post-detail .meta li i {
   padding-right: 0.4em;
 }
 
@@ -357,7 +359,7 @@ form.contact button:hover {
   vertical-align: middle;
 }
 
-.page-footer .content li .icon {
+.page-footer .content li i {
   font-size: 1.4em;
   padding-right: 0.4em;
 }
