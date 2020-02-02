@@ -75,27 +75,68 @@ a.default:hover {
   font-weight: bold;
 }
 
+.navbar .logo a::before {
+  display: inline-block;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  content: '{';
+}
+
+.navbar .logo a::after {
+  display: inline-block;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  content: '}';
+}
+
+.navbar .logo a:hover {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.navbar .logo a:hover::before {
+  -webkit-transform: translateX(-0.2em);
+          transform: translateX(-0.2em);
+}
+
+.navbar .logo a:hover::after {
+  -webkit-transform: translateX(0.2em);
+          transform: translateX(0.2em);
+}
+
 .navbar .menu {
   float: right;
   margin-right: 20%;
+  height: 64px;
 }
 
 .navbar .menu li {
   display: inline-block;
-  margin: 0 5px;
+  padding-left: 1em;
+  height: inherit;
 }
 
 .navbar .menu li a {
   color: #eeeeee;
   font-size: 1.4em;
-  padding: 7px 13px;
   text-transform: lowercase;
+  display: inline-block;
+  height: inherit;
 }
 
 .navbar .menu li a:hover {
   color: #bbbbbb;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.navbar .menu li a.active {
+  color: #bbbbbb;
+  border-bottom: 3px solid #bbbbbb;
 }
 
 .navbar .menu-btn {

@@ -110,25 +110,54 @@ a {
         color: $color-font-light;
         font-size: 2em;
         font-weight: bold;
+
+        a {
+            &::before {
+                display: inline-block;
+                transition: transform .5s ease;
+                content: '{';
+            }
+
+            &::after {
+                display: inline-block;
+                transition: transform .5s ease;
+                content: '}';
+            }
+
+            &:hover {
+                transition: all .5s ease;
+
+                &::before { transform: translateX(-.2em); }
+                &::after { transform: translateX(.2em); }
+            }
+        }
     }
 
     .menu {
         float: right;
         margin-right: $navbar-margin;
+        height: $navbar-height;
 
         li {
             display: inline-block;
-            margin: 0 5px;
+            padding-left: 1em;
+            height: inherit;
 
             a {
                 color: $color-font-light;
                 font-size: 1.4em;
-                padding: 7px 13px;
                 text-transform: lowercase;
+                display: inline-block;
+                height: inherit;
 
                 &:hover {
                     color: $color-lighter;
                     transition: .5s;
+                }
+
+                &.active {
+                    color: $color-lighter;
+                    border-bottom: 3px solid $color-lighter;
                 }
             }
         }
