@@ -1,12 +1,12 @@
 
-$separator-padding: 1em;
-
 $font-family: "Lucida Console";
 
-$container-width: 60%;
-$container-width-desktop: 80%;
+$container-width: 40%;
+$container-width-desktop: 60%;
 $container-width-tablet: 80%;
-$container-width-phone: 100%;
+$container-width-phone: 90%;
+
+$separator-padding: 1em;
 
 $navbar-height: 64px;
 $navbar-margin: (100% - $container-width) / 2;
@@ -14,9 +14,8 @@ $navbar-margin-desktop: (100% - $container-width-desktop) / 2;
 $navbar-margin-tablet: 2rem;
 $navbar-margin-phone: .8rem;
 
-$footer-height: 3em;
+$footer-height: 4em;
 
-/* COLORS */
 $color-lightest: #dddddd;
 $color-lighter: #bbbbbb;
 $color-light: #999999;
@@ -27,14 +26,13 @@ $color-darkest: #111111;
 $color-font-dark: #000000;
 $color-font-light: #eeeeee;
 
-/* SCREEN SIZES */
 $screen-smallest: 460px;
 $screen-small: 640px;
-$screen-medium: 912px;
+$screen-medium: 960px;
 $screen-large: 1200px;
+$screen-largest: 1440px;
 
-
-/* STYLE */
+/* GENERAL STYLE */
 
 * {
     box-sizing: border-box;
@@ -59,8 +57,6 @@ a {
     }
 }
 
-/* UTILITY */
-
 .justify {
     text-align: justify;
 }
@@ -80,9 +76,6 @@ a {
     display: block;
     clear: both;
 }
-
-
-/* CONTAINER */
 
 .container {
     width: $container-width;
@@ -140,7 +133,7 @@ a {
 
         li {
             display: inline-block;
-            padding-left: 1em;
+            padding-left: .6em;
             height: inherit;
 
             a {
@@ -248,6 +241,27 @@ a {
         }
     }
 
+}
+
+/* COMMENTS */
+.comments {
+    border: 1px solid $color-light;
+    border-radius: 2px;
+    height: 400px;
+    color: $color-lighter;
+
+    i {
+        font-size: 4em;
+        position: relative;
+        left: 50%;
+        margin: 0.5em 0em;
+        transform: translateX(-50%);
+    }
+
+    p {
+        text-align: center;
+        font-size: 2em;
+    }
 }
 
 /* PROJECTS */
@@ -383,7 +397,7 @@ form.contact
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: $screen-large) {
+@media screen and (max-width: $screen-largest) {
 
     .container {
         width: $container-width-desktop;
@@ -398,6 +412,9 @@ form.contact
             margin-right: $navbar-margin-desktop;
         }
     }
+}
+
+@media screen and (max-width: $screen-large) {
 
     .project-list {
         width: 100%;
@@ -430,10 +447,16 @@ form.contact
                 display: block;
                 margin: 50px 0;
                 line-height: 30px;
+                height: auto;
     
                 a {
                     font-size: 20px;
+
+                    &.active {
+                        border: none;
+                    }
                 }
+
             }
         }
     
@@ -458,6 +481,15 @@ form.contact
 
         li {
             display: block;
+        }
+    }
+
+    .page-footer .content li {
+        display: block;
+
+        &:not(:last-child)::after {
+            content: "";
+            margin: 0;
         }
     }
 }

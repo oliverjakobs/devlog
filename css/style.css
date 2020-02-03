@@ -1,6 +1,4 @@
-/* COLORS */
-/* SCREEN SIZES */
-/* STYLE */
+/* GENERAL STYLE */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -25,7 +23,6 @@ a.default:hover {
   color: #999999;
 }
 
-/* UTILITY */
 .justify {
   text-align: justify;
 }
@@ -46,9 +43,8 @@ a.default:hover {
   clear: both;
 }
 
-/* CONTAINER */
 .container {
-  width: 60%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -69,7 +65,7 @@ a.default:hover {
 }
 
 .navbar .logo {
-  margin-left: 20%;
+  margin-left: 30%;
   color: #eeeeee;
   font-size: 2em;
   font-weight: bold;
@@ -112,13 +108,13 @@ a.default:hover {
 
 .navbar .menu {
   float: right;
-  margin-right: 20%;
+  margin-right: 30%;
   height: 64px;
 }
 
 .navbar .menu li {
   display: inline-block;
-  padding-left: 1em;
+  padding-left: .6em;
   height: inherit;
 }
 
@@ -222,6 +218,28 @@ a.default:hover {
 
 .post-detail .meta li i {
   padding-right: 0.4em;
+}
+
+/* COMMENTS */
+.comments {
+  border: 1px solid #999999;
+  border-radius: 2px;
+  height: 400px;
+  color: #bbbbbb;
+}
+
+.comments i {
+  font-size: 4em;
+  position: relative;
+  left: 50%;
+  margin: 0.5em 0em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.comments p {
+  text-align: center;
+  font-size: 2em;
 }
 
 /* PROJECTS */
@@ -336,14 +354,14 @@ form.contact button:hover {
 
 /* FOOTER */
 .page-footer {
-  height: 3em;
+  height: 4em;
   text-align: center;
   margin-top: 2rem;
 }
 
 .page-footer .content {
   border-top: 1px solid #dddddd;
-  line-height: 3em;
+  line-height: 4em;
   list-style: none;
   text-transform: lowercase;
   padding: 0px;
@@ -376,22 +394,25 @@ form.contact button:hover {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
   .container {
-    width: 80%;
+    width: 60%;
   }
   .navbar .logo {
-    margin-left: 10%;
+    margin-left: 20%;
   }
   .navbar .menu {
-    margin-right: 10%;
+    margin-right: 20%;
   }
+}
+
+@media screen and (max-width: 1200px) {
   .project-list {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 960px) {
   .container {
     width: 80%;
   }
@@ -414,9 +435,13 @@ form.contact button:hover {
     display: block;
     margin: 50px 0;
     line-height: 30px;
+    height: auto;
   }
   .navbar .menu li a {
     font-size: 20px;
+  }
+  .navbar .menu li a.active {
+    border: none;
   }
   .navbar .menu-btn {
     display: block;
@@ -436,11 +461,18 @@ form.contact button:hover {
   .post .meta li {
     display: block;
   }
+  .page-footer .content li {
+    display: block;
+  }
+  .page-footer .content li:not(:last-child)::after {
+    content: "";
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 460px) {
   .container {
-    width: 100%;
+    width: 90%;
   }
   .navbar .logo {
     margin-left: 0.8rem;
