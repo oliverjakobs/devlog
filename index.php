@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <!-- Font Aweseome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"  />
+    
+    <title>{ devlog }</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <?php include("app/includes/navbar.php"); ?>
+
+    <!-- Content -->
+    <div class="page-content container clearfix">
+
+      <div class="block">
+        <h1 class="title separator-bottom">Welcome to {devlog}</h1>
+        <p class="justify">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus mi, pellentesque sit amet bibendum at, ultricies sed lectus. 
+          Integer a nunc vitae massa dignissim semper. Sed viverra rutrum sapien, eu aliquam elit pretium at. Donec sed eros eu lorem placerat 
+          ornare. Duis sed auctor elit. Ut a luctus quam, luctus faucibus lectus. Etiam non nisl in leo vestibulum sagittis. Phasellus laoreet, 
+          augue vel elementum tempus, dolor elit faucibus tellus, accumsan viverra magna erat nec urna. Integer elementum tristique vulputate. 
+          Praesent nisl purus, congue interdum tristique a, vestibulum nec mi. Nunc vestibulum justo eu sagittis dignissim. Pellentesque sagittis 
+          nunc eu lacus dapibus, nec condimentum odio egestas. Praesent id sodales dolor.
+          <br><br>
+          Nullam in nulla pellentesque, scelerisque nunc ac, volutpat neque. Aenean et ex at turpis elementum tempus vitae a nibh. Pellentesque 
+          rhoncus blandit augue, iaculis finibus urna rhoncus aliquet. Curabitur quis risus justo. Vestibulum eget tincidunt nisi. Curabitur 
+          elementum gravida nisl, quis dapibus lorem tincidunt ut. Mauris blandit ante convallis lectus suscipit condimentum.
+          <br><br>
+          Quisque eleifend sed libero non elementum. Praesent in diam fringilla, dictum sapien quis, dapibus turpis. Aliquam at pulvinar mi. 
+          Sed hendrerit tristique venenatis. Phasellus varius dolor a turpis congue, sed vestibulum urna tincidunt. In hac habitasse platea 
+          dictumst. Cras eu rhoncus nibh, at mattis tellus. Aenean turpis nibh, viverra vitae hendrerit at, volutpat non nunc. In tincidunt a massa 
+          a pellentesque. Mauris suscipit odio vel consequat hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+          <br><br>
+          Sed iaculis venenatis elit at molestie. Donec luctus sit amet ante quis mollis. Nullam porttitor rhoncus nisl, ut tempus est dapibus vitae. 
+          Quisque hendrerit tincidunt massa. Maecenas auctor sapien quis ultrices ornare. Etiam sit amet aliquam velit. Pellentesque eu nisl porttitor, 
+          vestibulum velit a, maximus sapien. Mauris nibh nisi, dignissim sed lacinia malesuada, tristique non tellus.
+          <br><br>
+          In hendrerit ante vel massa egestas, ac sollicitudin velit dignissim. Nam blandit auctor vehicula. Pellentesque gravida convallis orci, quis 
+          lacinia tellus varius et. Maecenas vitae tellus efficitur, faucibus leo ut, viverra ligula. Mauris non vehicula purus. Vestibulum sed tellus felis. 
+          Praesent gravida vehicula risus id rutrum. Mauris rutrum molestie arcu, sed feugiat nisi tristique id.
+        </p>
+        <a class="default" href="timeline.php">Explore &raquo;</a>
+      </div>
+    </div>
+    <!-- Footer -->
+    <?php include("app/includes/footer.php"); ?>
+
+  </body>
+</html>

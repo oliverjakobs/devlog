@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     
     <!-- Font Aweseome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"  />
@@ -14,17 +14,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
-      <label class="logo"><a href="index.html">devlog</a></label>
-      <input type="checkbox" id="menu-check">
-      <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+    <?php include("app/includes/navbar.php"); ?>
 
     <!-- Content -->
     <div class="page-content container clearfix">
@@ -47,7 +37,7 @@
 
         <article class="post">
           <header>
-            <h2 class="title"><a href="single.html">Post 1</a></h2>
+            <h2 class="title"><a href="single.php">Post 1</a></h2>
             <ul class="meta">
               <li><i class="far fa-calendar"></i>20/01/2020</li>
               <li><i class="far fa-user"></i>Oliver Jakobs</li>
@@ -62,13 +52,13 @@
               dapibus dictum. Nam faucibus purus consectetur ipsum tincidunt, sit amet accumsan quam dictum. Nullam ac venenatis massa. Nunc aliquam massa 
               quis lorem rhoncus, quis sollicitudin erat ornare. Aliquam vitae bibendum ipsum. Curabitur viverra maximus metus, vitae interdum magna blandit quis. 
             </p>
-            <a class="default" href="single.html">View &raquo;</a>
+            <a class="default" href="single.php">View &raquo;</a>
           </div>
         </article>
 
         <article class="post">
           <header>
-            <h2 class="title"><a href="single.html">Post 3</a></h2>
+            <h2 class="title"><a href="single.php">Post 3</a></h2>
             <ul class="meta">
               <li><i class="far fa-calendar"></i>17/01/2020</li>
               <li><i class="far fa-user"></i>Oliver Jakobs</li>
@@ -82,7 +72,7 @@
               mollis quam hendrerit nec. Aenean suscipit convallis quam, et fermentum urna pulvinar vitae. Quisque nisi nulla, luctus ac quam nec, ullamcorper vulputate 
               tortor.
             </p>
-            <a class="default" href="single.html">View &raquo;</a>
+            <a class="default" href="single.php">View &raquo;</a>
           </div>
         </article>
 
@@ -91,13 +81,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer container">
-      <ul class="content">
-        <li><a href="copyright.html"><i class="far fa-copyright"></i>2020 Oliver Jakobs</a></li>
-        <li><a href="https://github.com/oliverjakobs"><i class="fab fa-github"></i>Github</a></li>
-        <li><a href="contact.html"><i class="far fa-envelope"></i>Contact</a></li>
-      </ul>
-    </footer>
+    <?php include("app/includes/footer.php"); ?>
 
   </body>
 </html>

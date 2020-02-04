@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     
     <!-- Font Aweseome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"  />
@@ -14,17 +14,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
-      <label class="logo"><a href="index.html">devlog</a></label>
-      <input type="checkbox" id="menu-check">
-      <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+    <?php include("app/includes/navbar.php"); ?>
 
     <!-- Content -->
     <div class="page-content container clearfix">
@@ -40,24 +30,18 @@
           sit amet risus luctus, lacinia dolor quis, porttitor ex. Suspendisse rhoncus, nunc vel aliquam rutrum, velit mi. 
         </p>
         <ul class="project-list">
-          <li><a href="project.html">Frost<span>View &raquo;</span></a></li>
-          <li><a href="project.html">Ignis<span>View &raquo;</span></a></li>
-          <li><a href="project.html">toolbox<span>View &raquo;</span></a></li>
-          <li><a href="project.html">Clockwork<span>View &raquo;</span></a></li>
-          <li><a href="project.html">Capricorn<span>View &raquo;</span></a></li>
+          <li><a href="project.php">Frost<span>View &raquo;</span></a></li>
+          <li><a href="project.php">Ignis<span>View &raquo;</span></a></li>
+          <li><a href="project.php">toolbox<span>View &raquo;</span></a></li>
+          <li><a href="project.php">Clockwork<span>View &raquo;</span></a></li>
+          <li><a href="project.php">Capricorn<span>View &raquo;</span></a></li>
         </ul>
       </div>
         
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer container">
-      <ul class="content">
-        <li><a href="copyright.html"><i class="far fa-copyright"></i>2020 Oliver Jakobs</a></li>
-        <li><a href="https://github.com/oliverjakobs"><i class="fab fa-github"></i>Github</a></li>
-        <li><a href="contact.html"><i class="far fa-envelope"></i>Contact</a></li>
-      </ul>
-    </footer>
+    <?php include("app/includes/footer.php"); ?>
 
   </body>
 </html>

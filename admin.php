@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     
     <!-- Font Aweseome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"  />
@@ -15,11 +15,11 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <label class="logo"><a href="index.html">devlog</a></label>
+      <label class="logo"><a href="index.php">devlog</a></label>
       <input type="checkbox" id="menu-check">
       <label for="menu-check" class="menu-btn"><i class="fas fa-bars"></i></label>
       <ul class="menu">
-        <li><a href="index.html">Back</a></li>
+        <li><a href="index.php">Back</a></li>
       </ul>
     </nav>
 
@@ -33,13 +33,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer container">
-      <ul class="content">
-        <li><a href="copyright.html"><i class="far fa-copyright"></i>2020 Oliver Jakobs</a></li>
-        <li><a href="https://github.com/oliverjakobs"><i class="fab fa-github"></i>Github</a></li>
-        <li><a href="contact.html"><i class="far fa-envelope"></i>Contact</a></li>
-      </ul>
-    </footer>
+    <?php include("app/includes/footer.php"); ?>
 
   </body>
 </html>
