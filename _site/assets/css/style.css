@@ -1,0 +1,145 @@
+/* GENERAL STYLE */
+* { box-sizing: border-box; }
+
+body { padding: 0; margin: 0; font-family: "Lucida Console"; }
+
+a { text-decoration: none; color: inherit; }
+
+a.default { color: #bbbbbb; }
+
+a.default:hover { color: #999999; }
+
+.justify { text-align: justify; }
+
+.separator-bottom { padding-bottom: 1em; border-bottom: 1px solid #dddddd; }
+
+.separator-top { padding-top: 1em; border-bottom: 1px solid #dddddd; }
+
+.clearfix::after { content: ''; display: block; clear: both; }
+
+.container { width: 40%; margin-left: auto; margin-right: auto; }
+
+/* NAVBAR */
+.navbar { background: #111111; height: 64px; width: 100%; }
+
+.navbar * { margin: 0; padding: 0; line-height: 64px; list-style: none; text-decoration: none; }
+
+.navbar .logo { margin-left: 30%; color: #eeeeee; font-size: 2em; font-weight: bold; }
+
+.navbar .logo a::before { display: inline-block; transition: transform .5s ease; content: '{'; }
+
+.navbar .logo a::after { display: inline-block; transition: transform .5s ease; content: '}'; }
+
+.navbar .logo a:hover { transition: transform .5s ease; }
+
+.navbar .logo a:hover::before { transform: translateX(-0.2em); }
+
+.navbar .logo a:hover::after { transform: translateX(0.2em); }
+
+.navbar .menu { float: right; margin-right: 30%; height: 64px; }
+
+.navbar .menu li { display: inline-block; padding-left: .6em; height: inherit; }
+
+.navbar .menu li a { color: #eeeeee; font-size: 1.4em; text-transform: lowercase; display: inline-block; height: inherit; }
+
+.navbar .menu li a:hover { color: #bbbbbb; transition: .5s; }
+
+.navbar .menu li a.active { color: #bbbbbb; border-bottom: 3px solid #bbbbbb; }
+
+.navbar .menu-btn { font-size: 2em; color: #eeeeee; float: right; margin-right: 2rem; cursor: pointer; display: none; }
+
+.navbar .menu-btn:hover { color: #bbbbbb; transition: .5s; }
+
+.navbar #menu-check { display: none; }
+
+/* CONTENT */
+.page-content { font-size: 1.1em; }
+
+.page-content .block { padding: 2rem 0rem; line-height: 1.4em; }
+
+.page-content .block > .title { margin-bottom: 1.4em; }
+
+/* POST */
+.post { padding: 2rem; margin: 1rem; }
+
+.post * { margin: 0px; padding: 0px; }
+
+.post .title { margin-bottom: 0.3em; }
+
+.post .meta { font-size: .85em; padding-left: 0.1em; }
+
+.post .meta li { display: inline; margin-right: 0.6em; color: #bbbbbb; }
+
+.post .meta li i { padding-right: 0.4em; }
+
+.post .summary { margin: 0.6em 0em; }
+
+/* POST DETAIL */
+.post-detail .meta { font-size: .85em; padding-left: 0.1em; }
+
+.post-detail .meta li { display: inline; margin-right: 0.6em; color: #bbbbbb; }
+
+.post-detail .meta li i { padding-right: 0.4em; }
+
+/* COMMENTS */
+.comments { border: 1px solid #999999; border-radius: 3px; color: #bbbbbb; }
+
+.comments i { font-size: 4em; position: relative; left: 50%; transform: translateX(-50%); margin: 0.5em 0em; }
+
+.comments p { text-align: center; font-size: 2em; margin-bottom: 1em; }
+
+/* PROJECTS */
+.project-list { width: 80%; margin: 2em auto; list-style: none; padding: 0; }
+
+.project-list li { margin-bottom: 1em; color: #666666; border: 1px solid #dddddd; }
+
+.project-list li a { padding: 1em; margin: 0em; display: block; width: 100%; height: 100%; }
+
+.project-list li span { float: right; }
+
+.project-list li:hover { border-color: #666666; transition: .5s; }
+
+/* CONTACT FORM */
+form.contact { padding: .8em .8em; border: 1px solid #999999; border-radius: 3px; text-align: center; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+form.contact .title { text-align: left; }
+
+form.contact section { margin: 0.6em 0; padding: 0.6em 0; text-align: left; }
+
+form.contact section label { display: block; }
+
+form.contact section input, form.contact section textarea { width: 100%; resize: none; padding: 0.2em; font-size: 1em; font-family: "Lucida Console"; margin-top: 0.4em; border: 1px solid #999999; border-radius: 3px; }
+
+form.contact section *::placeholder { text-transform: lowercase; color: #999999; opacity: 1; }
+
+form.contact button { display: inline-block; font-size: 1em; background: none; color: #999999; border: 1px solid #999999; border-radius: 3px; padding: .8em 0em; margin-top: .6em; width: 100%; text-transform: lowercase; cursor: pointer; }
+
+form.contact button:hover { color: #666666; border-color: #666666; transition: .5s; }
+
+/* FOOTER */
+.page-footer { height: 4em; text-align: center; margin-top: 2rem; }
+
+.page-footer .content { border-top: 1px solid #dddddd; line-height: 4em; list-style: none; text-transform: lowercase; padding: 0px; margin: 0px; }
+
+.page-footer .content li { display: inline; color: #bbbbbb; }
+
+.page-footer .content li * { vertical-align: middle; }
+
+.page-footer .content li i { font-size: 1.4em; padding-right: 0.4em; }
+
+.page-footer .content li a:hover { color: #999999; transition: .5s; }
+
+.page-footer .content li:not(:last-child)::after { content: "|"; margin: 1.25em; }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1440px) { .container { width: 60%; } .navbar .logo { margin-left: 20%; } .navbar .menu { margin-right: 20%; } }
+
+@media screen and (max-width: 1200px) { .project-list { width: 100%; } }
+
+@media screen and (max-width: 960px) { .container { width: 80%; } .navbar .logo { margin-left: 2rem; } .navbar .menu { margin-right: 2rem; position: fixed; width: 100%; height: 100vh; top: 64px; left: -100%; background: #444444; text-align: center; transition: all .5s; } .navbar .menu li { display: block; margin: 50px 0; line-height: 30px; height: auto; } .navbar .menu li a { font-size: 20px; } .navbar .menu li a.active { border: none; } .navbar .menu-btn { display: block; } .navbar #menu-check:checked ~ .menu { left: 0; } .post { padding: 2rem 0rem; } }
+
+@media screen and (max-width: 640px) { .post .meta { margin-top: 1em; } .post .meta li { display: block; } .page-footer .content li { display: block; } .page-footer .content li:not(:last-child)::after { content: ""; margin: 0; } }
+
+@media screen and (max-width: 460px) { .container { width: 90%; } .navbar .logo { margin-left: 0.8rem; } .navbar .menu { margin-right: 0.8rem; } .navbar .menu-btn { margin-right: 0.8rem; } }
+
+/*# sourceMappingURL=style.css.map */
